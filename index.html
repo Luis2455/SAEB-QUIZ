@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0d0221;
+            overflow: hidden;
+        }
+
+        /* Tela inicial com a imagem de fundo */
+     #start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('telainicial.jpg') no-repeat center center;
+    background-size: 100% 100%; /* Ajusta a imagem para caber na tela toda */
+    background-position: center;
+}
+
+
+        /* Botão de iniciar o quiz */
+        #start-button {
+            position: absolute;
+            bottom: 22%; /* Move o botão mais para baixo */
+            left: 8%; /* Mantém no lado esquerdo */
+            width: 302px; /* Aumenta o tamanho */
+            height: 45px;
+            background-color: black; /* Mantém a marca preta */
+            border: none;
+            cursor: pointer;
+            opacity: 0.0; /* Um pouco transparente */
+            border-radius: 60px; /* Deixa o botão mais arredondado */
+        }
+
+        /* Efeito ao passar o mouse */
+        #start-button:hover {
+            opacity: 0.5;
+            background-color:transparent; /* Um tom mais claro ao passar o mouse */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Tela inicial com imagem de fundo -->
+    <div id="start-screen">
+        <!-- Botão invisível que redireciona ao clicar -->
+        <button id="start-button" onclick="window.location.href='https://luis2455.github.io/quiz-matematica/'"></button>
+    </div>
+
+</body>
+</html>
