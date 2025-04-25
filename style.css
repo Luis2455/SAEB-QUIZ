@@ -3,12 +3,18 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* impede scroll no desktop */
   background-image: url('sua-imagem.jpg'); /* Substitua por sua imagem */
-  background-size: cover; /* Faz a imagem cobrir toda a tela */
-  background-position: center; /* Centraliza a imagem */
-  background-attachment: fixed; /* A imagem fica fixa enquanto rola a página */
-  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow: auto; /* permite scroll no celular */
+  }
 }
 
 /* Estilo da área de login */
@@ -17,7 +23,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: white; /* Fundo branco sólido */
+  background-color: white;
   color: black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -48,7 +54,6 @@ header {
   color: #00a82d; 
 }
 
-/* Botões de login e registro */
 .btn-login, .btn-register {
   text-decoration: none;
   background-color: #00a82d;
@@ -63,14 +68,12 @@ header {
   background-color: #007a2f;
 }
 
-/* "Ou" entre os botões */
 .or-text {
   font-size: 0.9em;
   color: black;
   margin: 0 10px;
 }
 
-/* A hero section com a imagem à direita e o texto à esquerda */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -150,9 +153,7 @@ header {
   }
 
   .nav-texts {
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    display: none; /* esconder "ajuda", "sobre" e "contato" */
   }
 
   header > div:last-child {
