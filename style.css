@@ -36,13 +36,22 @@ header {
     gap: 5px;
   }
 
-  .btn-login, .btn-register {
-    display: inline-block;
-    margin: 10px 0;
+  .or-text {
+    margin: 0 5px;
   }
 
-  .or-text {
-    display: none;
+  header > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-login,
+  .btn-register {
+    margin: 0;
+    padding: 10px 16px;
+    font-size: 0.95em;
   }
 
   .hero {
@@ -71,122 +80,5 @@ header {
   .logo {
     margin-left: 0;
     font-size: 2em;
-  }
-}
-.logo {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 3px;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  margin-left: 20px;
-}
-
-.nav-texts {
-  display: flex;
-  gap: 20px;
-  font-weight: bold;
-  font-size: 1.1em;
-  color: black;
-}
-
-.nav-texts span {
-  transition: color 0.3s;
-}
-
-.nav-texts span:hover {
-  color: #00a82d; 
-}
-
-/* Botões de login e registro */
-.btn-login, .btn-register {
-  text-decoration: none;
-  background-color: #00a82d;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-login:hover, .btn-register:hover {
-  background-color: #007a2f;
-}
-
-/* "Ou" entre os botões */
-.or-text {
-  font-size: 0.9em;
-  color: black;
-  margin: 0 10px;
-}
-
-/* A hero section com a imagem à direita e o texto à esquerda */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 40px;
-  flex-wrap: wrap;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  animation: fadeIn 2s ease-in-out;
-  background-color: transparent;
-  border-radius: 8px;
-}
-
-.hero-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  max-width: 500px;
-}
-
-.hero-text h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.hero-text p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-.btn-start {
-  text-decoration: none;
-  background-color: white;
-  color: #00a82d;
-  padding: 15px 30px;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.btn-start:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.05);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
